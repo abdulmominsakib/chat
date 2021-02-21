@@ -6,10 +6,18 @@ ThemeData lightThemeData(BuildContext context) {
   return ThemeData.light().copyWith(
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: Colors.white,
-    iconTheme: IconThemeData(color: kContentColorLightTheme),
+    appBarTheme: appBarTheme,
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Colors.white,
+      selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
+      unselectedItemColor: kContentColorLightTheme.withOpacity(0.32),
+      showUnselectedLabels: true,
+    ),
+    iconTheme: iconThemeDataLight,
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(displayColor: kContentColorLightTheme),
+        .apply(bodyColor: kContentColorLightTheme),
     colorScheme: ColorScheme.light(
+      primary: kPrimaryColor,
       secondary: kSecondaryColor,
       error: kErrorColor,
     ),
@@ -18,9 +26,35 @@ ThemeData lightThemeData(BuildContext context) {
 
 ThemeData darkThemeData(BuildContext context) {
   return ThemeData.dark().copyWith(
+    primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: kContentColorLightTheme,
-    iconTheme: IconThemeData(color: kContentColorDarkTheme),
+    appBarTheme: appBarTheme,
+    iconTheme: iconThemeDataDark,
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
-        .apply(displayColor: kContentColorDarkTheme),
+        .apply(bodyColor: kContentColorDarkTheme),
+    colorScheme: ColorScheme.dark().copyWith(
+      primary: kPrimaryColor,
+      secondary: kSecondaryColor,
+      error: kErrorColor,
+    ),
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: kContentColorLightTheme,
+      selectedItemColor: Colors.white70,
+      unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
+      showUnselectedLabels: true,
+      
+    ),
   );
 }
+
+final iconThemeDataLight = IconThemeData(color: kContentColorLightTheme);
+final iconThemeDataDark = IconThemeData(color: kContentColorDarkTheme);
+
+final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
+
+final bottomNavigationBarThemeDataDark = BottomNavigationBarThemeData(
+  backgroundColor: kContentColorLightTheme,
+  selectedItemColor: Colors.white70,
+  unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
+  showUnselectedLabels: true,
+);
