@@ -1,3 +1,4 @@
+import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -16,6 +17,14 @@ class _ChatsScreenState extends State<ChatsScreen> {
       appBar: buildAppBar(),
       body: Body(),
       bottomNavigationBar: buildBottomNavigationBar(context),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(
+          Icons.person_add_alt_1,
+          color: Colors.white,
+        ),
+        backgroundColor: kPrimaryColor,
+      ),
     );
   }
 

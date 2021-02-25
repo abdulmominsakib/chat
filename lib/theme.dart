@@ -42,7 +42,6 @@ ThemeData darkThemeData(BuildContext context) {
       selectedItemColor: Colors.white70,
       unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
       showUnselectedLabels: true,
-      
     ),
   );
 }
