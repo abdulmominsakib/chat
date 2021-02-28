@@ -1,6 +1,5 @@
 import 'package:chat/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'components/body.dart';
 
@@ -39,36 +38,15 @@ class _ChatsScreenState extends State<ChatsScreen> {
       type: BottomNavigationBarType.fixed,
       items: [
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(
-            "assets/icons/chat.svg",
-            color:
-                Theme.of(context).textTheme.bodyText1.color.withOpacity(0.32),
-          ),
-          activeIcon: SvgPicture.asset("assets/icons/chat.svg"),
+          icon: Icon(Icons.messenger),
           label: "Chats",
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(
-            "assets/icons/people.svg",
-            color:
-                Theme.of(context).textTheme.bodyText1.color.withOpacity(0.32),
-          ),
-          activeIcon: SvgPicture.asset(
-            "assets/icons/people.svg",
-            color: Theme.of(context).primaryColor,
-          ),
+          icon: Icon(Icons.people),
           label: "People",
         ),
         BottomNavigationBarItem(
-          icon: SvgPicture.asset(
-            "assets/icons/calls.svg",
-            color:
-                Theme.of(context).textTheme.bodyText1.color.withOpacity(0.32),
-          ),
-          activeIcon: SvgPicture.asset(
-            "assets/icons/calls.svg",
-            color: Theme.of(context).primaryColor,
-          ),
+          icon: Icon(Icons.call),
           label: "Calls",
         ),
         BottomNavigationBarItem(

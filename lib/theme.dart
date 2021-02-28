@@ -11,6 +11,7 @@ ThemeData lightThemeData(BuildContext context) {
       backgroundColor: Colors.white,
       selectedItemColor: kContentColorLightTheme.withOpacity(0.7),
       unselectedItemColor: kContentColorLightTheme.withOpacity(0.32),
+      selectedIconTheme: IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
     iconTheme: iconThemeDataLight,
@@ -41,6 +42,7 @@ ThemeData darkThemeData(BuildContext context) {
       backgroundColor: kContentColorLightTheme,
       selectedItemColor: Colors.white70,
       unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
+      selectedIconTheme: IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
   );
@@ -50,10 +52,3 @@ final iconThemeDataLight = IconThemeData(color: kContentColorLightTheme);
 final iconThemeDataDark = IconThemeData(color: kContentColorDarkTheme);
 
 final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
-
-final bottomNavigationBarThemeDataDark = BottomNavigationBarThemeData(
-  backgroundColor: kContentColorLightTheme,
-  selectedItemColor: Colors.white70,
-  unselectedItemColor: kContentColorDarkTheme.withOpacity(0.32),
-  showUnselectedLabels: true,
-);
