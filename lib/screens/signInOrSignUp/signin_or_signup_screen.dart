@@ -1,4 +1,5 @@
 import 'package:chat/components/primary_button.dart';
+import 'package:chat/screens/chats/chats_screen.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 import '../../constants.dart';
@@ -13,16 +14,21 @@ class SignInOrSignUpScreen extends StatelessWidget {
           child: Column(
             children: [
               Spacer(flex: 2),
-              // SvgPicture.asset(
-              //   MediaQuery.of(context).platformBrightness == Brightness.dark
-              //       ? "assets/icons/Logo_dark_theme.svg"
-              //       : "assets/icons/Logo_light_theme.svg",
-              //   height: 146,
-              // ),
+              Image.asset(
+                MediaQuery.of(context).platformBrightness == Brightness.dark
+                    ? "assets/images/Logo_dark.png"
+                    : "assets/images/Logo_light.png",
+                height: 146,
+              ),
               Spacer(),
               PrimaryButton(
                 text: "Sign In",
-                press: () {},
+                press: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => ChatsScreen(),
+                  ),
+                ),
               ),
               SizedBox(height: kDefaultPadding * 1.5),
               PrimaryButton(
