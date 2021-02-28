@@ -15,11 +15,10 @@ class PrimaryButton extends StatelessWidget {
   final VoidCallback press;
   final color;
   final EdgeInsets padding;
-  
 
   @override
   Widget build(BuildContext context) {
-    return FlatButton(
+    return MaterialButton(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(Radius.circular(40)),
       ),

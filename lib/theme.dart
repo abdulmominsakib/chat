@@ -14,7 +14,7 @@ ThemeData lightThemeData(BuildContext context) {
       selectedIconTheme: IconThemeData(color: kPrimaryColor),
       showUnselectedLabels: true,
     ),
-    iconTheme: iconThemeDataLight,
+    iconTheme: IconThemeData(color: kContentColorLightTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
         .apply(bodyColor: kContentColorLightTheme),
     colorScheme: ColorScheme.light(
@@ -30,7 +30,7 @@ ThemeData darkThemeData(BuildContext context) {
     primaryColor: kPrimaryColor,
     scaffoldBackgroundColor: kContentColorLightTheme,
     appBarTheme: appBarTheme,
-    iconTheme: iconThemeDataDark,
+    iconTheme: IconThemeData(color: kContentColorDarkTheme),
     textTheme: GoogleFonts.interTextTheme(Theme.of(context).textTheme)
         .apply(bodyColor: kContentColorDarkTheme),
     colorScheme: ColorScheme.dark().copyWith(
@@ -47,8 +47,5 @@ ThemeData darkThemeData(BuildContext context) {
     ),
   );
 }
-
-final iconThemeDataLight = IconThemeData(color: kContentColorLightTheme);
-final iconThemeDataDark = IconThemeData(color: kContentColorDarkTheme);
 
 final appBarTheme = AppBarTheme(centerTitle: false, elevation: 0);
